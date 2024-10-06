@@ -1,0 +1,20 @@
+package main
+import "fmt"
+
+func main(){
+    var kiri float32
+    var kanan float32
+    for{
+        fmt.Print("Masukkan Beban: ")
+        fmt.Scan(&kiri, &kanan)
+        var oleng bool = false
+        total := kiri + kanan
+        if (kiri - kanan) >= 9 || (kanan - kiri) >= 9{
+            oleng = true
+        }
+        if total > 150 || kanan <0 || kiri <0{
+            break
+        }
+        fmt.Println("Sepeda Motor Pak Andi akan Oleng : ", oleng)
+    }
+}
