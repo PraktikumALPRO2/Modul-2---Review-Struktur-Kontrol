@@ -41,11 +41,92 @@
 ------
 ## Dasar Teori
 
-Berikan penjelasan teori terkait materi modul ini dengan bahasa anda sendiri serta susunan yang terstruktur per topiknya.
+Pengertian Struktur Kontrol
+
+Struktur kontrol adalah bagian dari program yang mengontrol aliran eksekusi dari instruksi. Dalam bahasa pemrograman, struktur kontrol memungkinkan programmer untuk mengeksekusi potongan kode tertentu berdasarkan kondisi yang ditentukan. Terdapat dua jenis utama dari struktur kontrol: struktural kontrol alur (control flow) dan struktural kontrol repetisi (looping).
+
+Jenis Struktur Kontrol di Golang
+
+a. Struktur Kontrol Pemilihan (Conditional Statements)
+Struktur kontrol pemilihan digunakan untuk mengeksekusi blok kode tertentu berdasarkan kondisi yang ditentukan. Di Golang, struktur ini dapat dilakukan menggunakan if, else if, else, dan switch.
+
+If Statement:
+Digunakan untuk mengeksekusi blok kode jika kondisi tertentu terpenuhi.
+
+if kondisi {
+    // blok kode yang dijalankan jika kondisi benar
+}
+
+Else Statement:
+Menyediakan alternatif ketika kondisi if tidak terpenuhi.
+
+if kondisi {
+    // blok kode jika benar
+} else {
+    // blok kode jika salah
+}
+
+Else If Statement:
+
+Menangani beberapa kondisi secara berurutan.
+
+if kondisi1 {
+    // blok kode jika kondisi1 benar
+} else if kondisi2 {
+    // blok kode jika kondisi2 benar
+} else {
+    // blok kode jika semua kondisi salah
+}
+
+Switch Statement:
+Menyediakan cara yang lebih mudah untuk menangani banyak kondisi.
+
+switch variabel {
+case nilai1:
+    // blok kode jika variabel sama dengan nilai1
+case nilai2:
+    // blok kode jika variabel sama dengan nilai2
+default:
+    // blok kode jika tidak ada yang cocok
+}
+
+b. Struktur Kontrol Perulangan (Looping)
+Struktur kontrol perulangan digunakan untuk mengeksekusi blok kode secara berulang. Di Golang, terdapat beberapa jenis perulangan yang umum digunakan:
+
+For Loop:
+Merupakan struktur perulangan yang paling umum di Golang. Dapat digunakan dalam berbagai bentuk: perulangan dengan batas, perulangan tak terbatas, dan perulangan dengan iterator.
+
+for i := 0; i < 10; i++ {
+    // blok kode yang akan diulang
+}
+
+While Loop:
+
+Golang tidak memiliki struktur while secara eksplisit, tetapi dapat diimplementasikan dengan menggunakan for.
+for kondisi {
+
+    // blok kode yang diulang selama kondisi benar
+}
+
+Range Loop:
+Digunakan untuk iterasi melalui array, slice, map, string, atau channel.
+
+for index, value := range slice {
+    // blok kode dengan index dan value dari slice
+}
+
+Pentingnya Struktur Kontrol dalam Algoritma Pemrograman
+
+Struktur kontrol adalah komponen penting dalam algoritma pemrograman karena:
+Pengambilan Keputusan: Memungkinkan program untuk mengambil keputusan berdasarkan kondisi yang ada, sehingga program dapat beradaptasi dengan input yang berbeda.
+Perulangan: Memungkinkan eksekusi blok kode berkali-kali, yang sangat berguna dalam banyak algoritma, terutama saat bekerja dengan data dalam jumlah besar.
+Efisiensi: Mengoptimalkan alur eksekusi program, membuatnya lebih efisien dan lebih mudah dibaca.
+
+
 
 ## Guided 
 
-### 1. [Nama Topik]
+### 1. [Input dan Output dalam Golang]
 
 ```C++
 package main
@@ -89,7 +170,7 @@ Program dimulai dengan mendeklarasikan variabel nama yang bertipe string.
 Program kemudian menggunakan fmt.Scanln(&nama) untuk meminta pengguna memasukkan nama mereka. Pengguna harus mengetikkan nama dan menekan tombol Enter.
 Setelah menerima input, program mengeksekusi fmt.Println(nama) untuk menampilkan nama yang telah dimasukkan oleh pengguna.
 
-### 2. [Nama Topik]
+### 2. [Operasi Aritmatika dan Input dalam Golang]
 
 ```C++
 package main
@@ -138,7 +219,7 @@ Program meminta pengguna untuk memasukkan lima nilai penjualan dengan fmt.Scanln
 Setelah menerima input, program menghitung total penjualan dengan menambahkan semua nilai yang telah dimasukkan: hasil = a + b + c + d + e.
 Terakhir, program mencetak hasil total penjualan ke konsol dengan format yang telah ditentukan.
 
-### 3. [Nama Topik]
+### 3. [Siswa kelas IPA di salah satu sekolah menengah atas di Indonesia sedang mengadakan praktikum kimia. Di setiap percobaan akan menggunakan 4 tabung reaksi, yang mana. susunan warna cairan di setiap tabung akan menentukan hasil percobaan. Siswa diminta untuk mencatat hasil percobaan tersebut. Percobaan dikatakan berhasil apabila susunan warna zat cair pada gelas 1 hingga gelas 4 secara berturutan adalah 'merah', "kuning', "hijau', dan "ungu' selama 5 kali percobaan berulang. Buatlah sebuah program yang menerima Input berupa warna dari ke 4 gelas reaksi sebanyak 5 kali percobaan. Kemudian program akan menampilkan true apabila urutan warna sesuai dengan informasi yang diberikan pada paragraf sebelumnya, Telkom University urutan warna lainnya. dan false untuk informatics lab Perhatikan contoh sesi interaksi program seperti di bawah ini (teks bergaris bawah adalah input/read): dst]
 
 ```C++
 package main
@@ -234,7 +315,7 @@ Input pengguna dibaca, diproses, dan dibandingkan dengan urutan warna yang benar
 Jika ada perbedaan dalam urutan warna, program menghentikan loop dan menyiapkan output akhir.
 Program mencetak hasil akhir berdasarkan kesuksesan semua percobaan.
 
-### 4. [Nama Topik]
+### 4. [Diberikan sebuah nilai akhir mata kuliah (NAM) (0..100] dan standar penilaian nilai mata kuliah (NMK) sebagai berikut: dst]
 
 ```C++
 package main
