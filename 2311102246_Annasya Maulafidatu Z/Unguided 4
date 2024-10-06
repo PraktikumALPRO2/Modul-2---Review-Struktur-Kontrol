@@ -1,0 +1,31 @@
+package main
+import "fmt"
+
+func main(){
+    var parsel, kg, gr, hargakg, hargagr, total uint32
+    fmt.Print("Berat Parsel(gram): ")
+    fmt.Scan(&parsel)
+    gr = parsel % 1000
+    kg = (parsel - gr) / 1000 
+    fmt.Println("Detail Berat: ", kg , "Kg + ", gr, "gr")
+    hargakg = kg * 10000
+    if kg <= 10{
+        if gr < 500{
+            hargagr = gr * 15
+            total = hargakg + hargagr
+            fmt.Println("Detail Biaya: ", hargakg, " + ", hargagr)
+            fmt.Println("Total Biaya: ", total)
+        }else if gr >= 500{
+            hargagr = gr * 5
+            total = hargakg + hargagr
+            fmt.Println("Detail Biaya: ", hargakg, " + ", hargagr)
+            fmt.Println("Total Biaya: ", total)
+        }
+    }else if kg > 10{
+        hargagr = 0
+        total = hargakg + hargagr
+        fmt.Println("Detail Biaya: ", hargakg, " + ", hargagr)
+        fmt.Println("Total Biaya: ", total)
+    }
+}
+
