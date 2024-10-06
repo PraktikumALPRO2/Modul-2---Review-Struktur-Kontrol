@@ -1,0 +1,12 @@
+package main
+import "fmt"
+
+func main(){
+    var k float32
+    fmt.Print("Masukkan Nilai k: ")
+    fmt.Scan(&k)
+    atas := (4*k + 2) * (4*k + 2)
+    bawah := (4*k +1) *( 4*k + 3)
+    var fungsi float32 = atas / bawah
+    fmt.Print("Nilai fungsi f dari k: ", fungsi)
+}
