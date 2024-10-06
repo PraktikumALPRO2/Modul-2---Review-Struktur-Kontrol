@@ -36,7 +36,7 @@ Tipe data numerik non-desimal atau non floating point di Go ada beberapa jenis. 
 - uint , tipe data untuk bilangan cacah (bilangan positif).
 - int , tipe data untuk bilangan bulat (bilangan negatif dan positif).
 Kedua tipe data di atas kemudian dibagi lagi menjadi beberapa jenis, dengan pembagian berdasarkan lebar cakupan nilainya.
-
+```
 Tipe data 	Cakupan bilangan
 uint8 		0 ↔ 255
 uint16 		0 ↔ 65535
@@ -50,7 +50,7 @@ int32 		-2147483648 ↔ 2147483647
 int64 		-9223372036854775808 ↔ 9223372036854775807
 int 		sama dengan int32 atau int64 (tergantung nilai)
 rune 		sama dengan int32
-
+```
 Tipe data numerik desimal yang perlu diketahui ada 2, float32 dan float64 . Perbedaan kedua tipe data tersebut berada di lebar cakupan nilai desimal yang bisa ditampung
 ```go
 var decimalNumber = 2.62
