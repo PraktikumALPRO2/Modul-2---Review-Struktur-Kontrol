@@ -65,7 +65,29 @@ func main() {
 #### Output:
 ![ssoutput guided 1](https://github.com/user-attachments/assets/b91adc35-2942-44cc-b2aa-14c44e516e02)
 
-Kode di atas digunakan untuk mengambil input dari pengguna dan mencetaknya. Pertama, variabel nama dideklarasikan sebagai string untuk menyimpan input. Kemudian, fungsi fmt.Scanln(&nama) digunakan untuk menerima input dari pengguna dan menyimpannya ke dalam variabel nama. Setelah itu, fungsi fmt.Println(nama) mencetak input yang telah dimasukkan oleh pengguna. Kode ini efektif untuk menerima dan menampilkan data teks yang dimasukkan selama program berjalan.
+Kode di atas digunakan untuk mengambil input nama dari pengguna dan kemudian menampilkannya kembali. Program ini menunjukkan cara dasar dalam membaca input dan menampilkan output di konsol.
+
+Deskripsi Program
+
+Program ini dirancang untuk:
+Menerima input dari pengguna: Program ini meminta pengguna untuk memasukkan nama mereka.
+Menampilkan output: Setelah menerima input, program ini menampilkan nama yang dimasukkan oleh pengguna.
+
+Algoritma Program
+
+Deklarasi Variabel:
+Variabel nama dideklarasikan untuk menyimpan input dari pengguna.
+
+Mengambil Input:
+Program menggunakan fmt.Scanln(&nama) untuk membaca input dari konsol. Scanln membaca input hingga menemukan newline (enter), dan menyimpan hasilnya dalam variabel nama.
+
+Menampilkan Output:
+Setelah input diterima, program menggunakan fmt.Println(nama) untuk mencetak nama yang telah dimasukkan oleh pengguna ke konsol.
+
+Cara Kerja Program
+Program dimulai dengan mendeklarasikan variabel nama yang bertipe string.
+Program kemudian menggunakan fmt.Scanln(&nama) untuk meminta pengguna memasukkan nama mereka. Pengguna harus mengetikkan nama dan menekan tombol Enter.
+Setelah menerima input, program mengeksekusi fmt.Println(nama) untuk menampilkan nama yang telah dimasukkan oleh pengguna.
 
 ### 2. [Nama Topik]
 
@@ -87,7 +109,34 @@ func main() {
 #### Output:
 ![ss output guided 2](https://github.com/user-attachments/assets/6b767bfa-f77f-485f-bf95-7d7b65639439)
 
-Kode di atas digunakan untuk menghitung total penjualan dari lima input angka yang dimasukkan oleh pengguna. Pertama, lima variabel a, b, c, d, dan e dideklarasikan untuk menyimpan nilai integer dari input. Pengguna kemudian memasukkan lima angka yang disimpan ke dalam variabel tersebut menggunakan fmt.Scanln(&a, &b, &c, &d, &e). Setelah itu, program menjumlahkan kelima angka tersebut dan menyimpannya di variabel hasil. Terakhir, program mencetak hasil penjumlahan beserta angka-angka input dengan format "Hasil Penjualan (angka-angka) adalah = (hasil)".
+Kode di atas digunakan untuk  menghitung total penjualan dari lima produk. Program ini mengambil input dari pengguna dan kemudian menjumlahkan nilai-nilai tersebut, menampilkan hasilnya.
+
+Deskripsi Program
+
+Program ini bertujuan untuk:
+Menerima input dari pengguna: Program meminta pengguna untuk memasukkan jumlah penjualan dari lima produk yang berbeda.
+Menghitung total penjualan: Program menjumlahkan semua nilai yang dimasukkan.
+Menampilkan output: Program menampilkan hasil total penjualan ke konsol.
+Algoritma Program
+
+Deklarasi Variabel:
+Variabel a, b, c, d, e digunakan untuk menyimpan jumlah penjualan dari lima produk. Semua variabel tersebut bertipe int.
+Variabel hasil digunakan untuk menyimpan total penjualan.
+
+Mengambil Input:
+Program menggunakan fmt.Scanln(&a, &b, &c, &d, &e) untuk membaca input dari pengguna. Pengguna diminta untuk memasukkan lima angka yang dipisahkan oleh spasi.
+
+Menghitung Total:
+Total penjualan dihitung dengan menjumlahkan semua variabel a, b, c, d, dan e, dan hasilnya disimpan dalam variabel hasil.
+
+Menampilkan Output:
+Program menggunakan fmt.Println() untuk mencetak hasil penjualan dengan format yang jelas di konsol.
+
+Cara Kerja Program
+Program dimulai dengan mendeklarasikan variabel a, b, c, d, e, dan hasil yang bertipe int.
+Program meminta pengguna untuk memasukkan lima nilai penjualan dengan fmt.Scanln(&a, &b, &c, &d, &e). Pengguna harus mengetikkan lima angka yang dipisahkan oleh spasi.
+Setelah menerima input, program menghitung total penjualan dengan menambahkan semua nilai yang telah dimasukkan: hasil = a + b + c + d + e.
+Terakhir, program mencetak hasil total penjualan ke konsol dengan format yang telah ditentukan.
 
 ### 3. [Nama Topik]
 
@@ -145,7 +194,45 @@ func main() {
 ![ss output guided 3](https://github.com/user-attachments/assets/8961e7db-2911-4afa-842d-179d283a7d45)
 
 
-Kode di atas digunakan untuk memeriksa apakah pengguna dapat memasukkan urutan warna yang benar sebanyak lima kali percobaan. Urutan warna yang benar adalah "merah", "kuning", "hijau", "ungu". Pada setiap percobaan, program meminta input dari pengguna berupa serangkaian warna yang dipisahkan oleh spasi. Program kemudian memisahkan input tersebut dan memeriksa apakah urutannya sesuai dengan urutan yang benar. Jika ada kesalahan pada salah satu percobaan, program akan keluar dari loop dan menampilkan "BERHASIL : false". Jika semua percobaan benar, program akan menampilkan "BERHASIL : true".
+Kode di atas digunakan untuk memeriksa urutan warna yang dimasukkan oleh pengguna. Program ini dirancang untuk melakukan lima percobaan, di mana pengguna diminta untuk memasukkan urutan warna, dan program akan menentukan apakah urutan tersebut sesuai dengan urutan yang benar.
+
+Deskripsi Program
+
+Program ini memiliki tujuan untuk:
+Menerima input dari pengguna: Program meminta pengguna untuk memasukkan urutan warna selama lima percobaan.
+Memeriksa kesesuaian urutan: Program membandingkan input pengguna dengan urutan warna yang benar.
+Menampilkan hasil: Program menampilkan apakah semua percobaan berhasil atau tidak.
+
+Algoritma Program
+
+Deklarasi Variabel:
+Variabel correctOrder adalah sebuah slice yang berisi urutan warna yang benar: merah, kuning, hijau, ungu.
+Variabel reader digunakan untuk membaca input dari pengguna.
+Variabel success diinisialisasi sebagai true untuk menandakan bahwa semua percobaan berhasil sampai terbukti sebaliknya.
+
+Loop untuk Menerima Input:
+Program melakukan loop sebanyak 5 kali, masing-masing untuk setiap percobaan.
+Pada setiap iterasi, program meminta pengguna untuk memasukkan urutan warna.
+
+Memeriksa Input:
+Input dari pengguna dibaca dan di-trim untuk menghapus spasi di depan dan belakang.
+Input kemudian dipisahkan menjadi slice colors berdasarkan spasi.
+Program membandingkan setiap elemen dalam colors dengan elemen yang sesuai di correctOrder.
+
+Menghentikan Loop Jika Tidak Sesuai:
+Jika ditemukan warna yang tidak sesuai dalam salah satu percobaan, success diubah menjadi false, dan loop akan dihentikan.
+
+Menampilkan Hasil:
+Setelah loop selesai, program menampilkan hasil berdasarkan nilai success.
+Jika semua percobaan sesuai, hasilnya adalah BERHASIL : true. Jika tidak, hasilnya adalah BERHASIL : false.
+
+Cara Kerja Program
+Program dimulai dengan mendeklarasikan urutan warna yang benar dalam variabel correctOrder.
+Menggunakan bufio.NewReader, program siap untuk membaca input dari pengguna.
+Loop selama lima iterasi dilakukan, di mana setiap iterasi meminta pengguna untuk memasukkan urutan warna.
+Input pengguna dibaca, diproses, dan dibandingkan dengan urutan warna yang benar.
+Jika ada perbedaan dalam urutan warna, program menghentikan loop dan menyiapkan output akhir.
+Program mencetak hasil akhir berdasarkan kesuksesan semua percobaan.
 
 ### 4. [Nama Topik]
 
@@ -184,7 +271,41 @@ func main() {
 #### Output:
 ![ss output guided 4 modul 2](https://github.com/user-attachments/assets/56a70727-d95e-4953-bd8a-0fa5bfe7e2db)
 
-Kode di atas digunakan untuk mengonversi nilai numerik yang diinput oleh pengguna menjadi nilai huruf berdasarkan rentang tertentu. Pengguna diminta memasukkan nilai numerik (tipe `float32`), kemudian program menentukan nilai huruf (`A`, `B`, `C`, `D`, `E`, atau `F`) berdasarkan logika kondisional `if-else`. Setiap rentang nilai memiliki indeks huruf yang berbeda, misalnya nilai di atas 80 mendapatkan "A", sedangkan nilai di bawah 40 mendapatkan "F". Setelah itu, hasilnya ditampilkan dengan format "Nilai Indeks untuk nilai (nilai numerik) adalah (nilai huruf)".
+Kode di atas digunakan untuk menentukan nilai huruf (indeks) berdasarkan nilai numerik yang dimasukkan oleh pengguna. Program ini mengikuti skala penilaian tertentu untuk memberikan huruf yang sesuai berdasarkan nilai yang diberikan.
+
+Deskripsi Program
+
+Tujuan: Program ini bertujuan untuk:
+Menerima input nilai numerik dari pengguna.
+Menentukan nilai huruf berdasarkan rentang nilai yang telah ditentukan.
+Menampilkan hasil indeks nilai kepada pengguna.
+
+Algoritma Program
+
+Deklarasi Variabel:
+nam: Variabel bertipe float32 untuk menyimpan nilai numerik yang dimasukkan oleh pengguna.
+nmk: Variabel bertipe string untuk menyimpan hasil nilai huruf yang akan ditampilkan.
+
+Input Nilai:
+Program meminta pengguna untuk memasukkan nilai dengan mencetak pesan "Masukkan nilai : ".
+Nilai yang dimasukkan kemudian disimpan di dalam variabel nam.
+Penentuan Indeks Nilai:
+
+Program menggunakan serangkaian pernyataan if dan else if untuk menentukan indeks huruf berdasarkan nilai yang dimasukkan:
+Nilai lebih dari 80 akan mendapatkan indeks "A".
+Nilai lebih dari 72.5 dan sampai 80 mendapatkan indeks "B".
+Nilai lebih dari 65 dan sampai 72.5 mendapatkan indeks "C".
+Nilai lebih dari 50 dan sampai 65 mendapatkan indeks "D".
+Nilai lebih dari 40 dan sampai 50 mendapatkan indeks "E".
+Nilai 40 ke bawah mendapatkan indeks "F".
+
+Menampilkan Hasil:
+Program mencetak hasil dengan format "Nilai Indeks untuk nilai X adalah Y", di mana X adalah nilai yang dimasukkan dan Y adalah indeks huruf yang sesuai.
+Cara Kerja Program
+Ketika program dijalankan, pengguna diminta untuk memasukkan nilai.
+Setelah pengguna memasukkan nilai, program akan mengevaluasi nilai tersebut menggunakan serangkaian kondisi.
+Berdasarkan nilai yang dimasukkan, program menentukan nilai huruf yang sesuai.
+Hasil akhir ditampilkan kepada pengguna dalam format yang mudah dibaca.
 
 ## Unguided 
 
@@ -823,7 +944,7 @@ Memanggil fungsi cariFaktor untuk mendapatkan faktor-faktor dari b dan mencetak 
 Memanggil fungsi cekPrima untuk menentukan apakah b adalah bilangan prima dan mencetak hasilnya.
 
 Cara Kerja Program
-Program dimulai dengan mendeklarasikan fungsi cariFaktor untuk mencari faktor dari bilangan yang diberikan.
+Program dimulai dengan mendeklarasikan fungsi cari Faktor untuk mencari faktor dari bilangan yang diberikan.
 Fungsi cekPrima didefinisikan untuk mengecek apakah bilangan tersebut adalah bilangan prima.
 Dalam fungsi main, pengguna diminta untuk memasukkan bilangan bulat.
 Setelah pengguna memasukkan bilangan, program memanggil cariFaktor dan menampilkan faktor-faktor dari bilangan tersebut.
