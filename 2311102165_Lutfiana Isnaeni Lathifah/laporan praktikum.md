@@ -231,8 +231,6 @@ func main() {
 	fmt.Println("Pita:", pita)
 }
 ```
-Kode di atas digunakan untuk mengumpulkan dan menampilkan daftar bunga yang dimasukkan oleh pengguna, di mana bunga tersebut akan disusun dalam format yang terpisah oleh tanda " - ". Berikut adalah deskripsi, algoritma, dan cara kerja program tersebut.
-
 Deskripsi Program
 
 Program ini memungkinkan pengguna untuk memasukkan sejumlah nama bunga sesuai dengan jumlah yang diinginkan. Setelah itu, program akan menampilkan daftar nama bunga dalam bentuk string yang dipisahkan oleh tanda " - ". Ini berguna untuk membuat daftar bunga yang lebih rapi dan mudah dibaca.
@@ -261,7 +259,9 @@ Tambahkan nama bunga ke dalam variabel pita. Jika bunga yang dimasukkan adalah b
 Menampilkan Hasil:
 
 Setelah semua nama bunga dimasukkan, tampilkan hasilnya dengan format "Pita: " diikuti dengan daftar bunga yang telah dimasukkan.
+
 Cara Kerja Program
+
 Pengguna diminta untuk memasukkan jumlah bunga yang ingin dimasukkan.
 Program kemudian meminta pengguna untuk memasukkan nama-nama bunga satu per satu.
 Nama-nama bunga akan disimpan dalam string pita dengan format yang diinginkan.
@@ -320,17 +320,14 @@ Kode di atas digunakan untuk memasukkan nama-nama bunga satu per satu. Program a
 Algoritma Program
 
 Inisialisasi:
-
 Import package yang diperlukan: bufio, fmt, os, dan strings.
 Buat objek reader dari bufio.NewReader(os.Stdin) untuk membaca input dari pengguna.
 
 Inisialisasi Variabel:
-
 Inisialisasi variabel pita sebagai string kosong untuk menyimpan daftar nama bunga.
 Inisialisasi variabel count sebagai 0 untuk menghitung jumlah bunga yang dimasukkan.
 
 Loop untuk Memasukkan Nama Bunga:
-
 Lakukan perulangan (loop) yang akan terus berjalan hingga pengguna mengetik "SELESAI".
 Dalam setiap iterasi, tampilkan pesan "Bunga i: " untuk meminta pengguna memasukkan nama bunga.
 Baca input nama bunga dari pengguna dan hilangkan spasi di awal dan akhir menggunakan strings.TrimSpace.
@@ -341,11 +338,11 @@ Jika bukan, tambahkan nama bunga baru ke dalam pita dengan format " - " untuk me
 Increment (tambah) count untuk menghitung jumlah bunga yang telah dimasukkan.
 
 Menampilkan Hasil:
-
 Setelah loop selesai (ketika pengguna mengetik "SELESAI"), tampilkan hasil pita yang berisi semua nama bunga yang telah dimasukkan.
 Tampilkan juga jumlah bunga yang dimasukkan dengan mencetak nilai count.
 
 Cara Kerja Program
+
 Pengguna diminta untuk memasukkan nama bunga satu per satu.
 Program akan terus meminta input hingga pengguna mengetik "SELESAI".
 Setiap nama bunga yang dimasukkan akan disimpan dalam variabel pita dengan pemisahan " - " jika bukan nama bunga pertama.
@@ -390,23 +387,19 @@ Kode di atas digunakan untuk mengumpulkan data berat dari dua kantong belanja. P
 Algoritma Program
 
 Inisialisasi:
-
 Import package yang diperlukan, yaitu fmt.
 Inisialisasi variabel berat1 dan berat2 bertipe float64 untuk menyimpan berat dari masing-masing kantong.
 
 Loop untuk Memasukkan Berat:
-
 Lakukan perulangan tanpa batas (infinite loop) menggunakan for {}.
 Di dalam loop, tampilkan pesan untuk meminta pengguna memasukkan berat belanjaan dari kedua kantong dengan format yang sesuai.
 Baca input dari pengguna menggunakan fmt.Scan(&berat1, &berat2) untuk menyimpan nilai berat ke dalam variabel berat1 dan berat2.
 
 Pemeriksaan Kondisi Berat:
-
 Cek apakah berat salah satu kantong (berat1 atau berat2) lebih besar atau sama dengan 9 kg menggunakan kondisi if berat1 >= 9 || berat2 >= 9.
 Jika salah satu dari berat tersebut memenuhi syarat, tampilkan pesan "Proses selesai." dan keluar dari loop menggunakan break.
 
 Cara Kerja Program
-
 Program dimulai dengan menunggu input dari pengguna untuk berat dari dua kantong belanja.
 Setelah pengguna memasukkan berat, program akan memeriksa apakah salah satu dari berat tersebut lebih dari atau sama dengan 9 kg.
 Jika salah satu kantong melebihi 9 kg, program akan mencetak pesan "Proses selesai." dan menghentikan eksekusi.
@@ -464,12 +457,10 @@ Kode di atas digunakan untuk memasukkan berat dari dua kantong belanja secara be
 Algoritma Program
 
 Inisialisasi:
-
 Import package yang diperlukan: fmt untuk fungsi input/output dan math untuk fungsi matematis.
 Inisialisasi variabel berat1, berat2, dan totalBerat dengan tipe float64 untuk menyimpan berat dari masing-masing kantong dan total berat.
 
 Loop untuk Memasukkan Berat:
-
 Lakukan perulangan tanpa batas (infinite loop) menggunakan for {}.
 Di dalam loop, tampilkan pesan untuk meminta pengguna memasukkan berat dari kedua kantong belanjaan.
 Baca input dari pengguna menggunakan fmt.Scan(&berat1, &berat2) untuk menyimpan nilai berat ke dalam variabel berat1 dan berat2.
@@ -483,7 +474,6 @@ Jika ya, tampilkan pesan "Proses selesai." dan keluar dari loop.
 Cek apakah sepeda motor akan oleng dengan menghitung selisih antara berat1 dan berat2 menggunakan math.Abs(berat1-berat2). Jika selisih ini lebih besar atau sama dengan 9, tampilkan pesan bahwa sepeda motor akan oleng, jika tidak, tampilkan pesan bahwa sepeda motor tidak akan oleng.
 
 Cara Kerja Program
-
 Program dimulai dengan meminta pengguna untuk memasukkan berat dari dua kantong belanja.
 Setelah pengguna memasukkan berat, program akan memeriksa apakah salah satu dari berat tersebut negatif. Jika ya, program akan mencetak "Proses selesai." dan menghentikan eksekusi.
 Jika berat tidak negatif, program akan menghitung total berat dari kedua kantong dan memeriksa apakah totalnya melebihi 150 kg. Jika total melebihi 150 kg, program akan menghentikan eksekusi dan mencetak "Proses selesai."
@@ -493,36 +483,352 @@ Proses ini akan berulang hingga salah satu dari kondisi berhenti terpenuhi.
 #### Output 
 ![ss output unguided 2b no 3 ke 2](https://github.com/user-attachments/assets/bdde822a-3c32-40a8-9dd5-4a210105c8d1)
 
-### 2b no 4. []
+### 2b no 4. [Diberikan sebuah persamaan sebagai berikut ini. Informatics lab f(k) = ((4k + 2) ^ 2)/((4k + 1)(4k + 3)) Buatlah sebuah program yang menerima input sebuah bilangan sebagai K, kemudian menghitung dan menampilkan nilai f(k) sesuai persamaan di atas. Perhatikan contoh sesi interaksi program seperti di bawah ini (teks bergaris bawah adalah input/read): dst ]
+
+### Program pertama: Menghitung nilai f(k)
+```C++
+// Lutfiana Isnaeni Lathifah
+// 2311102165
+
+package main
+
+import (
+	"fmt"
+)
+
+func f(k int) float64 {
+	// Menghitung nilai f(k) = ((4k + 2)^2) / ((4k + 1)(4k + 3))
+	numerator := (4*float64(k) + 2) * (4*float64(k) + 2)
+	denominator := (4*float64(k) + 1) * (4*float64(k) + 3)
+	return numerator / denominator
+}
+
+func main() {
+	var k int
+
+	// Meminta input nilai K
+	fmt.Print("Nilai K = ")
+	fmt.Scan(&k)
+
+	// Menghitung dan menampilkan nilai f(K)
+	result := f(k)
+	fmt.Printf("Nilai f(K) = %.10f\n", result)
+}
+```
+Kode di atas digunakan untuk menghitung nilai dari fungsi matematis yang melibatkan variabel 
+𝑘. Fungsi tersebut dihitung dengan menggunakan rumus yang dinyatakan dalam fungsi f(k). Program ini akan meminta pengguna untuk memasukkan nilai 
+k dan kemudian mencetak hasilnya dengan format yang ditentukan.
+
+Algoritma Program
+
+Inisialisasi:
+Import package fmt yang digunakan untuk fungsi input/output.
+Definisikan fungsi f(k int) float64 yang akan melakukan perhitungan berdasarkan rumus yang telah diberikan.
+
+Menghitung Nilai:
+menghitung nilai dari fungsi matematis yang melibatkan variabel 
+𝑘. Fungsi tersebut dihitung dengan menggunakan rumus yang dinyatakan dalam fungsi f(k). Program ini akan meminta pengguna untuk memasukkan nilai 
+k dan kemudian mencetak hasilnya dengan format yang ditentukan.
+
+Algoritma Program
+
+Inisialisasi:
+Import package fmt yang digunakan untuk fungsi input/output.
+Definisikan fungsi f(k int) float64 yang akan melakukan perhitungan berdasarkan rumus yang telah diberikan.
+
+Menghitung Nilai:
+Di dalam fungsi f, hitung nilai numerator yaitu (4k+2)^2
+Hitung nilai denominator yaitu (4k+1 (4k+3)
+Kembalikan hasil pembagian antara numerator dan denominator.
+
+Input Pengguna:
+Di dalam fungsi main, deklarasikan variabel k untuk menyimpan input dari pengguna.
+Tampilkan pesan meminta pengguna untuk memasukkan nilai 𝑘. Gunakan fmt.Scan(&k) untuk membaca input dari pengguna.
+
+Memanggil Fungsi dan Menampilkan Hasil:
+Panggil fungsi f(k) untuk menghitung nilai berdasarkan input yang diberikan.
+Tampilkan hasil perhitungan dengan format dua belas desimal menggunakan fmt.Printf.
+
+Cara Kerja Program
+Program dimulai dengan mendefinisikan fungsi f(k int) float64, yang merupakan inti dari program. Fungsi ini menghitung nilai berdasarkan rumus yang telah ditetapkan.
+Di dalam fungsi main, program meminta pengguna untuk memasukkan nilai 
+𝑘 melalui konsol.
+Setelah pengguna memasukkan nilai 𝑘, program akan memanggil fungsi f(k) dan melakukan perhitungan sesuai rumus.
+Hasil dari fungsi f(k) kemudian ditampilkan di layar dengan format dua belas angka desimal untuk memberikan akurasi tinggi.
+Program akan berhenti setelah menampilkan hasil perhitungan.
+Kembalikan hasil pembagian antara numerator dan denominator.
+
+Input Pengguna:
+Di dalam fungsi main, deklarasikan variabel k untuk menyimpan input dari pengguna.
+Tampilkan pesan meminta pengguna untuk memasukkan nilai 𝑘.
+Gunakan fmt.Scan(&k) untuk membaca input dari pengguna.
+Memanggil Fungsi dan Menampilkan Hasil:
+
+Panggil fungsi f(k) untuk menghitung nilai berdasarkan input yang diberikan.
+Tampilkan hasil perhitungan dengan format dua belas desimal menggunakan fmt.Printf.
+
+Cara Kerja Program
+Program dimulai dengan mendefinisikan fungsi f(k int) float64, yang merupakan inti dari program. Fungsi ini menghitung nilai berdasarkan rumus yang telah ditetapkan. Di dalam fungsi main, program meminta pengguna untuk memasukkan nilai 
+𝑘 melalui konsol Setelah pengguna memasukkan nilai 𝑘, program akan memanggil fungsi f(k) dan melakukan perhitungan sesuai rumus.
+Hasil dari fungsi f(k) kemudian ditampilkan di layar dengan format dua belas angka desimal untuk memberikan akurasi tinggi.
+Program akan berhenti setelah menampilkan hasil perhitungan.
+
+#### Output:
+
+![ss unguided 2b no 4 ke 1](https://github.com/user-attachments/assets/11ff7a75-3204-467f-8ee9-acc1bc8ff641)
+
+### Program ke dua menghitung hampiran nilai akar 2 dengan menggunakan fungsi f(k)
+```C++
+// Lutfiana Isnaeni Lathifah
+// 2311102165
+
+package main
+
+import (
+	"fmt"
+)
+
+func f(k int) float64 {
+	// Menghitung nilai f(k) = ((4k + 2)^2) / ((4k + 1)(4k + 3))
+	numerator := (4*float64(k) + 2) * (4*float64(k) + 2)
+	denominator := (4*float64(k) + 1) * (4*float64(k) + 3)
+	return numerator / denominator
+}
+
+func main() {
+	var K int
+	var sqrt2 float64 = 1
+
+	// Meminta input nilai K
+	fmt.Print("Nilai K = ")
+	fmt.Scan(&K)
+
+	// Menghitung hampiran akar 2
+	for k := 0; k <= K; k++ {
+		sqrt2 *= f(k)
+	}
+
+	// Menampilkan hasil hampiran akar 2
+	fmt.Printf("Nilai akar 2 = %.10f\n", sqrt2)
+}
+```
+Kode di atas digunakan  menghampiri nilai akar dua menggunakan metode penghitungan berdasarkan fungsi matematis yang dinyatakan. Fungsi 
+𝑓(𝑘)
+f(k) digunakan untuk menghasilkan faktor pengali yang kemudian dikalikan secara berurutan untuk mendapatkan nilai hampiran 
+akar 2.
+
+Algoritma Program
+
+Inisialisasi:
+Import package fmt untuk melakukan input/output.
+Definisikan fungsi f(k int) float64 yang menghitung nilai berdasarkan rumus matematis tertentu.
+
+Menghitung Nilai Fungsi:
+Di dalam fungsi f, hitung nilai numerator (4k+2)^2
+Hitung nilai denominator (4k+1)(4k+3).
+Kembalikan hasil pembagian antara numerator dan denominator.
+
+Input Pengguna:
+Di dalam fungsi main, deklarasikan variabel K untuk menyimpan input dari pengguna dan sqrt2 yang diinisialisasi dengan 1.
+Tampilkan pesan meminta pengguna untuk memasukkan nilai K.
+Gunakan fmt.Scan(&K) untuk membaca input dari pengguna.
+
+Menghitung Hampiran Akar Dua:
+Lakukan loop dari 0 hingga 𝐾 untuk menghitung hampiran akar 2.
+Di dalam loop, kalikan nilai sqrt2 dengan hasil dari fungsi f(k) untuk setiap iterasi.
+
+Menampilkan Hasil:
+Setelah loop selesai, tampilkan hasil akhir hampiran akar 2 dengan format 10 angka desimal menggunakan fmt.Printf.
+
+Cara Kerja Program
+Program dimulai dengan mendefinisikan fungsi f(k int) float64, yang merupakan inti dari penghitungan. Fungsi ini menghitung nilai berdasarkan rumus matematis yang telah ditetapkan.
+Di dalam fungsi main, program meminta pengguna untuk memasukkan nilai 𝐾 yang menentukan berapa banyak iterasi yang akan dilakukan.
+Setelah pengguna memasukkan nilai 𝐾, program melakukan loop dari 0 hingga 𝐾. Untuk setiap nilai 𝑘, program memanggil fungsi f(k) untuk mendapatkan nilai pengali dan mengalikan hasilnya dengan sqrt2.
+Program menghitung hasil dari semua iterasi dan menyimpan hasil akhir di variabel sqrt2.
+Terakhir, hasil hampiran akar 2. Ditampilkan di layar dengan format dua belas desimal.
+
+#### Output: 
+
+![ss output 2b no 4 ke 2](https://github.com/user-attachments/assets/eca32cdf-f6e4-4f3b-87b7-390f126c2b3b)
+
+### 2c no 1. [PT POS membutuhkan aplikasi perhitungan biaya kirim berdasarkan berat parsel. Maka, buatlah program BlayaPos untuk menghitung blaya pengiriman tersebut dengan ketentuan sebagai berikut! Dari berat parsel (dalam gram), harus dihitung total berat dalam kg dan sisanya (dalam gram). Biaya jasa pengiriman adalah Rp. 10.000,- per kg. Jika sisa berat tidak kurang dari 500 gram, maka tambahan biaya kirim hanya Rp. 5,- per gram saja. Tetapi jika kurang dari 500 gram, maka tambahan biaya akan dibebankan sebesar Rp. 15,- per gram. Sisa berat (yang kurang dari 1kg) digratiskan biayanya apabila total berat ternyata lebih dari 10kg. Perhatikan contoh sesi interaksi program seperti di bawah ini (teks bergaris bawah adalah input/read): dst]
+
+```C++
+// Lutfiana Isnaeni Lathifah
+// 2311102165
+
+package main
+
+import (
+	"fmt"
+)
+
+func hitungBiayaPengiriman(beratGram int) {
+	// Menghitung berat dalam kg dan sisa gram
+	kg := beratGram / 1000
+	gram := beratGram % 1000
+
+	// Biaya dasar (Rp 10.000 per kg)
+	biayaDasar := kg * 10000
+
+	// Menghitung biaya tambahan untuk sisa gram
+	var biayaTambahan int
+	if gram <= 500 {
+		biayaTambahan = gram * 5
+	} else {
+		biayaTambahan = gram * 15
+	}
+
+	// Total biaya
+	totalBiaya := biayaDasar + biayaTambahan
+
+	// Membatasi biaya maksimal untuk berat lebih dari 10 kg
+	if kg >= 10 {
+		totalBiaya = 100000
+	}
+
+	// Menampilkan hasil
+	fmt.Printf("Berat paket (gram): %d\n", beratGram)
+	fmt.Printf("Detail berat: %d kg + %d gr\n", kg, gram)
+	fmt.Printf("Detail biaya: Rp. %d + Rp. %d\n", biayaDasar, biayaTambahan)
+	fmt.Printf("Total biaya: Rp. %d\n", totalBiaya)
+}
+
+func main() {
+	// Contoh penggunaan fungsi
+	hitungBiayaPengiriman(8500)
+	hitungBiayaPengiriman(9250)
+	hitungBiayaPengiriman(11750)
+}
+```
+Kode di atas digunakan untuk menghitung biaya pengiriman paket berdasarkan berat yang dimasukkan dalam gram. Biaya pengiriman dihitung berdasarkan tarif yang ditentukan, dengan biaya tambahan untuk berat yang melebihi batas tertentu. Program ini juga memperlihatkan bagaimana berat dalam gram dikonversi menjadi kilogram dan sisa gram untuk menghitung biaya secara lebih akurat.
+
+Algoritma Program
+
+Definisi Fungsi:
+Mendefinisikan fungsi hitungBiayaPengiriman(beratGram int) yang menerima parameter beratGram dalam satuan gram.
+
+Penghitungan Berat:
+Menghitung berat paket dalam kilogram dengan membagi beratGram dengan 1000.
+Menghitung sisa gram dengan menggunakan modulus (%).
+
+Menghitung Biaya Dasar:
+Biaya dasar dihitung dengan mengalikan berat dalam kilogram dengan tarif dasar Rp 10.000.
+
+Menghitung Biaya Tambahan:
+Jika sisa gram kurang dari atau sama dengan 500 gram, biaya tambahan adalah Rp 5 per gram.
+Jika sisa gram lebih dari 500 gram, biaya tambahan adalah Rp 15 per gram.
+
+Total Biaya:
+Menghitung total biaya dengan menjumlahkan biaya dasar dan biaya tambahan.
+Membatasi total biaya maksimal untuk berat lebih dari 10 kg (10000 gram) menjadi Rp 100.000.
+
+Menampilkan Hasil:
+Menampilkan rincian berat paket (gram, kg, dan sisa gram).
+Menampilkan rincian biaya dasar dan biaya tambahan.
+Menampilkan total biaya pengiriman.
+
+Fungsi main:
+Fungsi main berfungsi sebagai titik masuk program. Di sini, contoh penggunaan fungsi hitungBiayaPengiriman ditampilkan dengan berbagai berat paket.
+
+Cara Kerja Program
+Program dimulai dengan mendefinisikan fungsi hitungBiayaPengiriman yang menangani semua logika perhitungan biaya pengiriman.
+Fungsi ini menerima input berat dalam gram, melakukan perhitungan berat dalam kilogram dan sisa gram, dan menghitung biaya berdasarkan tarif yang telah ditentukan.
+Setelah melakukan perhitungan, fungsi menampilkan semua rincian yang diperlukan ke layar.
+Di dalam fungsi main, fungsi hitungBiayaPengiriman dipanggil dengan beberapa contoh berat paket (8500 gram, 9250 gram, dan 11750 gram), yang memberikan hasil yang berbeda sesuai dengan berat yang dimasukkan.
+
+#### Output:
+![ss output unguided 2c no 1](https://github.com/user-attachments/assets/25de69a8-f0e6-4f33-b4bb-63d0c9209c94)
+
+
+### 2c no 3. [Sebuah bilangan bulat b memiliki faktor bilangan f > O jika f habis membagi b. Contoh: 2 merupakan faktor dari bilangan 6 karena 6 habis dibagi 2. Buatlah program yang menerima input sebuah bilangan bulat b dan b> 1. Program harus dapat mencari dan menampilkan semua faktor dari bilangan tersebut! Perhatikan contoh sesi interaksi program seperti di bawah ini (teks bergaris bawah adalah input/read): dst]
 
 ### Program pertama:
 ```C++
+// Lutfiana Isnaeni Lathifah
+// 2311102165
 
+package main
+
+import (
+	"fmt"
+)
+
+// Fungsi untuk mencari faktor-faktor dari sebuah bilangan
+func cariFaktor(b int) []int {
+	var faktor []int
+	for i := 1; i <= b; i++ {
+		if b%i == 0 {
+			faktor = append(faktor, i)
+		}
+	}
+	return faktor
+}
+
+// Fungsi untuk menentukan apakah bilangan tersebut prima
+func cekPrima(b int) bool {
+	// Sebuah bilangan prima hanya memiliki 2 faktor: 1 dan dirinya sendiri
+	if b <= 1 {
+		return false
+	}
+	count := 0
+	for i := 1; i <= b; i++ {
+		if b%i == 0 {
+			count++
+		}
+	}
+	return count == 2
+}
+
+func main() {
+	// Input dari pengguna
+	var b int
+	fmt.Print("Masukkan bilangan bulat: ")
+	fmt.Scan(&b)
+
+	// Cari faktor-faktor dari bilangan tersebut
+	faktor := cariFaktor(b)
+	fmt.Printf("Faktor: %v\n", faktor)
+
+	// Cek apakah bilangan prima atau bukan
+	prima := cekPrima(b)
+	fmt.Printf("Prima: %v\n", prima)
+}
 ```
-Kode di atas digunakan untuk 
+Deskripsi Program
+
+Program ini dirancang untuk dua tujuan utama:
+
+Mencari faktor-faktor dari bilangan bulat: Faktor-faktor adalah bilangan yang dapat membagi bilangan tersebut tanpa menyisakan sisa.
+Menentukan apakah bilangan tersebut merupakan bilangan prima: Bilangan prima adalah bilangan yang hanya memiliki dua faktor, yaitu 1 dan dirinya sendiri.
+Algoritma Program
+
+Definisi Fungsi:
+cariFaktor(b int) []int: Fungsi ini menerima satu parameter b (bilangan bulat) dan mengembalikan slice yang berisi faktor-faktor dari b.
+cekPrima(b int) bool: Fungsi ini menerima satu parameter b (bilangan bulat) dan mengembalikan nilai boolean yang menunjukkan apakah b adalah bilangan prima atau bukan.
+
+Fungsi cariFaktor:
+Membuat slice kosong faktor untuk menyimpan faktor-faktor.
+Melakukan loop dari 1 hingga b. Jika b dapat dibagi habis oleh i (dalam hal ini, b % i == 0), maka i adalah faktor dan ditambahkan ke slice faktor.
+Mengembalikan slice faktor.
+
+Fungsi cekPrima:
+Memeriksa apakah b kurang dari atau sama dengan 1. Jika iya, mengembalikan false karena bilangan tersebut bukan prima.
+Menghitung jumlah faktor dari b dengan melakukan loop dari 1 hingga b.
+Mengembalikan true jika jumlah faktor adalah 2, menandakan bahwa b adalah bilangan prima, dan false jika tidak.
+
+Fungsi main:
+Meminta input dari pengguna untuk bilangan bulat b.
+Memanggil fungsi cariFaktor untuk mendapatkan faktor-faktor dari b dan mencetak hasilnya.
+Memanggil fungsi cekPrima untuk menentukan apakah b adalah bilangan prima dan mencetak hasilnya.
+
+Cara Kerja Program
+Program dimulai dengan mendeklarasikan fungsi cariFaktor untuk mencari faktor dari bilangan yang diberikan.
+Fungsi cekPrima didefinisikan untuk mengecek apakah bilangan tersebut adalah bilangan prima.
+Dalam fungsi main, pengguna diminta untuk memasukkan bilangan bulat.
+Setelah pengguna memasukkan bilangan, program memanggil cariFaktor dan menampilkan faktor-faktor dari bilangan tersebut.
+Program kemudian memanggil cekPrima untuk memeriksa apakah bilangan tersebut adalah bilangan prima dan menampilkan hasilnya.
 
 #### Output:
-![ss output unguided 2b no 2 ke 1](https://github.com/user-attachments/assets/fcfcdcb7-260e-447a-a43f-b814586934d8)
-
-### 2c no 1. []
-
-### Program pertama:
-```C++
-
-```
-Kode di atas digunakan untuk 
-
-#### Output:
-![ss output unguided 2b no 2 ke 1](https://github.com/user-attachments/assets/fcfcdcb7-260e-447a-a43f-b814586934d8)
-
-### 2c no 3. []
-
-### Program pertama:
-```C++
-
-```
-Kode di atas digunakan untuk 
-
-#### Output:
-![ss output unguided 2b no 2 ke 1](https://github.com/user-attachments/assets/fcfcdcb7-260e-447a-a43f-b814586934d8)
+![ss output unguided 2c no 3](https://github.com/user-attachments/assets/d1f415f7-8c29-4bb1-8ab7-faa485abdfdb)
 
