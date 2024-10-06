@@ -1,0 +1,59 @@
+package main
+import "fmt"
+
+func main(){
+    Bunga := [] string{"Mawar", "Melati", "Tulip", "Teratai", "Kamboja", "Anggrek"}
+    var banyak int
+    fmt.Print("Masukkan Bilangan: ")
+    fmt.Scan (&banyak)
+    fmt.Println(" ")
+    if banyak == 0{
+        fmt.Println("Program tidak menerima input 0!")
+    }else{
+        for a:= 1; a <= banyak; a++{
+            bagi := a%6
+            if bagi == 1{
+                fmt.Println ("Bunga ", a ,": " + Bunga[0])
+            }else if bagi == 2{
+                fmt.Println ("Bunga ", a ,": " + Bunga[1])
+            }else if bagi == 3{
+                fmt.Println ("Bunga ", a ,": " + Bunga[2])
+            }else if bagi == 4{
+                fmt.Println ("Bunga ", a ,": " + Bunga[3])
+            }else if bagi == 5{
+                fmt.Println ("Bunga ", a ,": " + Bunga[4])
+            }else if bagi == 0{
+                fmt.Println ("Bunga ", a ,": " + Bunga[5])
+            }
+        }
+        fmt.Print("Pita : ")
+        for a:= 1; a <= banyak; a++{
+            sisa := a%6
+            if sisa == 1{
+                fmt.Print (Bunga[0] + " - ")
+            }else if sisa == 2{
+                fmt.Print (Bunga[1] + " - ")
+            }else if sisa == 3{
+                fmt.Print (Bunga[2] + " - ")
+            }else if sisa == 4{
+                fmt.Print (Bunga[3] + " - ")
+            }else if sisa == 5{
+                fmt.Print (Bunga[4] + " - ")
+            }else if sisa == 0{
+                fmt.Print (Bunga[5] + " - ")
+            }
+        }
+    }
+
+    //Modifikasi program
+    fmt.Println("\n")
+    fmt.Println("\n Input Bunga Pita")
+    for ke:=1; ke>0; ke++{
+        var Bunga string
+        fmt.Print("Bunga ", ke, ": ")
+        fmt.Scan(&Bunga)
+        if Bunga == "SELESAI"{
+            break
+        }
+    }
+}
