@@ -1,0 +1,28 @@
+package main
+
+import "fmt"
+
+func main(){
+    var b, bagi, a int
+    var banyak int = 0
+    var faktor [] int
+    var prima bool = false
+    fmt.Print("Masukkan Bilangan Bulat: ")
+    fmt.Scan (&b)
+    for a= 1; a <= b; a++{
+        bagi = b % a
+        if bagi == 0{
+            faktor = append(faktor, a)
+            banyak++
+        }
+    }
+    fmt.Println("Faktor dari bilangan ", b, " adalah ")
+    for _, f := range faktor {
+        fmt.Print(f, " ")
+    }
+    fmt.Println() 
+    if banyak  == 2{
+        prima = true
+    }
+    fmt.Println("Prima: ", prima)
+}
