@@ -41,21 +41,41 @@
 ------
 ## Dasar Teori
 
-## Pengertian Go
-Go adalah bahasa pemrograman yang banyak digunakan untuk pengembangan aplikasi yang membutuhkan kinerja tinggi, seperti aplikasi server, sistem terdistribusi, dan aplikasi web berskala besar. Dengan kemampuan menangani concurrency (pemrosesan paralel) secara efisien, Go sangat cocok untuk membangun aplikasi berat seperti layanan cloud, sistem operasi, serta aplikasi backend dengan trafik tinggi. Programmer yang menguasai Go memiliki peluang besar dalam karirnya, terutama dalam industri teknologi yang fokus pada pembuatan infrastruktur skala besar, komputasi awan, dan aplikasi server yang andal serta cepat.
+1. Struktur Program Go
+Bahasa pemrograman Go, atau sering disebut Golang, memiliki struktur yang sederhana dan mudah dipahami. Struktur dasar program Go terdiri dari beberapa elemen penting, yaitu:
 
-## Variabel Tipe Data 
-1. Varibel Keyword var
-Keyword var digunakan untuk membuat variabel baru. Skema Penggunaan var :
+- Deklarasi Package: Semua file Go harus dimulai dengan deklarasi package. Program yang dieksekusi biasanya menggunakan package main.
+- Pernyataan Import: Digunakan untuk mengimpor package lain yang menyediakan fungsi-fungsi tambahan, seperti paket fmt untuk input-output.
+- Fungsi main: Setiap program Go yang dapat dieksekusi harus memiliki fungsi main. Fungsi ini adalah entry point dari eksekusi program.
+- Deklarasi Fungsi: Digunakan untuk mendefinisikan logika modular. Setiap fungsi dideklarasikan dengan kata kunci func dan dapat menerima parameter serta mengembalikan nilai.
 
-var <nama-variabel> <tipe-data>
-var <nama-variabel> <tipe-data> = <nilai>
+2. Tipe Data
+Go mendukung beberapa tipe data dasar yang digunakan untuk menyimpan nilai, baik itu bilangan bulat, bilangan desimal, teks, maupun nilai boolean. Tipe data dalam Go dapat didefinisikan secara eksplisit atau diinferensikan berdasarkan nilai.
+
+Berikut adalah beberapa tipe data yang sering digunakan dalam Go:
+
+2.1. Tipe Data Dasar
+- Bilangan Bulat:
+  - int, int8, int16, int32, int64: Tipe data untuk bilangan bulat dengan berbagai ukuran.
+  - uint, uint8, uint16, uint32, uint64: Tipe data bilangan bulat tanpa tanda (hanya bilangan positif).
+
+3. Instruksi Data
+Instruksi data dalam Go mencakup operasi yang dilakukan pada variabel dan tipe data. Go memiliki beberapa instruksi dasar, yaitu:
+
+ 3.1. Deklarasi Variabel
+      - Go menggunakan kata kunci var untuk mendeklarasikan variabel, namun juga mendukung deklarasi dengan operator := yang memungkinkan deklarasi dan inisialisasi dalam satu langkah.
+3.2. Operasi Aritmatika
+     - Go mendukung operasi aritmatika dasar seperti penjumlahan (+), pengurangan (-), perkalian (*), pembagian (/), dan modulus (%).
+3.3. Operasi Logika dan Perbandingan
+     - Operasi logika (&&, ||, !) dan perbandingan (==, !=, <, >, <=, >=) digunakan untuk bekerja dengan nilai boolean atau membandingkan dua nilai.
+3.4. Instruksi Kontrol
+     - Instruksi kontrol mengendalikan alur eksekusi program, seperti if, for, dan switch.
 
 ## Guided 
 
 ### 1. [Nama Topik]
 
-```C++
+```go
 package main
 
 import (
@@ -77,19 +97,45 @@ Kode di atas digunakan untuk mengambil input dari pengguna dan mencetaknya. Pert
 
 ### 2. [Nama Topik]
 
-```C++
-package main
-
-import "fmt"
-
+```go
 func main() {
+	// Urutan warna yang benar
+	correctOrder := []string{"merah", "kuning", "hijau", "ungu"}
 
-	var a, b, c, d, e int
-	var hasil int
-	fmt.Scanln(&a, &b, &c, &d, &e)
+	// Membaca input untuk 5 percobaan
+	reader := bufio.NewReader(os.Stdin)
+	success := true
 
-	hasil = a + b + c + d + e
-	fmt.Println("Hasil Penjualan", a, b, c, d, e, "adalah =", hasil)
+	for i := 1; i <= 5; i++ {
+		fmt.Printf("Percobaan %d: ", i)
+
+		// Membaca input dari pengguna
+		input, _ := reader.ReadString('\n')
+		input = strings.TrimSpace(input)
+
+		// Memisahkan input berdasarkan spasi
+		colors := strings.Split(input, " ")
+
+		// Mengecek apakah urutan warna sesuai
+		for j := 0; j < 4; j++ {
+			if colors[j] != correctOrder[j] {
+				success = false
+				break
+			}
+		}
+
+		// Jika ada percobaan yang tidak sesuai, keluar dari loop
+		if !success {
+			break
+		}
+	}
+
+	// Menampilkan hasil
+	if success {
+		fmt.Println("BERHASIL : true")
+	} else {
+		fmt.Println("BERHASIL : false")
+	}
 }
 ```
 #### Output:
@@ -99,7 +145,7 @@ Program ini bertujuan untuk menjumlahkan lima angka yang dimasukkan oleh penggun
 
 ### 3. [Nama Topik]
 
-```C++
+```go
 package main
 
 import (
@@ -154,45 +200,6 @@ func main() {
 
 Program ini meminta pengguna untuk memasukkan urutan warna pada lima percobaan dan memeriksa apakah urutannya sesuai dengan urutan yang benar, yaitu "merah", "kuning", "hijau", "ungu". Pengguna diminta untuk memasukkan urutan warna yang dipisahkan dengan spasi. Pada setiap percobaan, program membaca input pengguna, memisahkan warna-warna yang dimasukkan, lalu membandingkannya dengan urutan yang benar. Jika ada urutan yang salah, program langsung menghentikan percobaan dan menampilkan pesan "BERHASIL : false". Jika semua percobaan benar, maka program akan menampilkan "BERHASIL : true".
 
-### 4. [Nama Topik]
-
-```C++
-package main
-
-import "fmt"
-
-func main() {
-	var nam float32
-	var nmk string
-
-	// Meminta input nilai
-	fmt.Print("Masukkan nilai : ")
-	fmt.Scan(&nam)
-
-	// Logika penentuan nilai huruf berdasarkan nilai numerik
-	if nam > 80 {
-		nmk = "A"
-	} else if nam > 72.5 {
-		nmk = "B"
-	} else if nam > 65 {
-		nmk = "C"
-	} else if nam > 50 {
-		nmk = "D"
-	} else if nam > 40 {
-		nmk = "E"
-	} else {
-		nmk = "F"
-	}
-
-	// Menampilkan hasil
-	fmt.Printf("Nilai Indeks untuk nilai %.2f adalah %s\n", nam, nmk)
-}
-```
-#### Output:
-![240302_00h00m06s_screenshot]()
-
-Kode di atas digunakan untuk meminta input nilai dari pengguna, lalu menampilkan nilai huruf yang sesuai. Pertama, variabel nam digunakan untuk menyimpan nilai numerik, dan nmk untuk menyimpan nilai huruf. Setelah pengguna memasukkan nilai, program akan memeriksa nilai tersebut dan memberikan hasil sebagai berikut: jika nilai lebih dari 80, hurufnya A; lebih dari 72,5 adalah B; lebih dari 65 adalah C; lebih dari 50 adalah D; lebih dari 40 adalah E; dan jika kurang dari atau sama dengan 40, hurufnya F. Terakhir, program menampilkan nilai yang dimasukkan beserta nilai hurufnya dengan dua angka di belakang koma.
-
 ## Unguided 
 
 ### 1. [Soal]
@@ -207,7 +214,7 @@ Tampilkan isi pita setelah proses input selesai.
 
 Modifikasi program sebelumnya, proses input akan berhenti apabila user mengetikkan 'SELESAI'. Kemudian tampilkan isi pita beserta banyaknya bunga yang ada di dalam pita.
 
-```C++
+```go
 // Agnes Refilina Fiska
 // S1 IF11-05 / 2311102126
 
@@ -218,47 +225,75 @@ import (
 	"fmt"
 	"os"
 	"strings"
+	"strconv"
 )
 
 func main() {
-	var pita string // Variabel untuk menyimpan kumpulan bunga
-	var n, hitung int // n adalah jumlah bunga yang akan diinput, hitung untuk menghitung input yang valid
+	// Membuat reader untuk membaca input dari pengguna
+	reader := bufio.NewReader(os.Stdin)
 
-	scanner := bufio.NewScanner(os.Stdin)
+	// Meminta input jumlah bunga yang akan dimasukkan (bilangan bulat positif N)
+	fmt.Print("N: ")
+	var N int
+	for {
+		// Baca input dari pengguna
+		input, err := reader.ReadString('\n')
+		if err != nil {
+			fmt.Printf("Error membaca input: %v", err)
+			return
+		}
 
-	// Meminta input bilangan bulat positif
-	fmt.Print("Masukkan jumlah bunga yang ingin diinput: ")
-	fmt.Scanln(&n)
-
-	// Input data bunga N kali atau sampai user mengetik 'SELESAI'
-	for i := 0; i < n; i++ {
-		fmt.Printf("Masukkan nama bunga %d : ", i+1)
-		scanner.Scan()
-		bunga := scanner.Text()
-
-		// Jika input adalah 'SELESAI', maka keluar dari loop
-		if strings.EqualFold(bunga, "SELESAI") {
+		// Konversi input ke integer
+		N, err = strconv.Atoi(strings.TrimSpace(input))
+		if err != nil || N <= 0 {
+			fmt.Println("Harap masukkan bilangan bulat positif.")
+		} else {
 			break
 		}
-
-		// Pengolahan data (penggabungan string menggunakan operator "+")
-		if pita == "" {
-			pita = bunga
-		} else {
-			pita = pita + " - " + bunga
-		}
-
-		hitung++ // Menambah jumlah bunga yang berhasil diinput
 	}
 
-	// Output pita dan jumlah bunga
-	fmt.Println("\nIsi pita bunga: ", pita)
-	fmt.Printf("Jumlah bunga yang ada di dalam pita: %d\n", hitung)
+	// Inisialisasi variabel pita (string) untuk menyimpan nama bunga
+	var pita string
+	var count int // Menyimpan jumlah bunga yang dimasukkan
+
+	// Loop untuk menerima input nama bunga sebanyak N kali
+	for i := 1; i <= N; i++ {
+		fmt.Printf("Bunga %d: ", i) // Menambahkan instruksi
+
+		// Membaca input dari pengguna
+		input, err := reader.ReadString('\n')
+		if err != nil {
+			fmt.Printf("Error: %v", err)
+			return // Keluar dari program jika ada kesalahan
+		}
+
+		// Menghapus spasi dan karakter newline dari input
+		input = strings.TrimSpace(input)
+
+		// Cek jika pengguna mengetik "SELESAI"
+		if strings.ToUpper(input) == "SELESAI" {
+			break // Menghentikan input jika "SELESAI" dimasukkan
+		}
+
+		// Menggabungkan nama bunga dengan pita menggunakan " – " sebagai pemisah
+		if pita == "" {
+			pita = input // Jika pita masih kosong, langsung masukkan nama bunga
+		} else {
+			pita = pita + " – " + input // Jika sudah ada isinya, tambahkan dengan pemisah " – "
+		}
+
+		count++ // Menambah jumlah bunga yang dimasukkan
+	}
+
+	// Menampilkan isi pita dan bunga setelah semua input dimasukkan
+	fmt.Println("Pita:", pita)
+	fmt.Printf("Bunga: %d", count)
+	
 }
 ```
 
 #### Output:
-![240302_00h00m06s_screenshot]()
+![unguided1_Agnes.png]()
 
 Program ini mengumpulkan dan menampilkan nama-nama bunga yang diinput oleh pengguna. Pertama, pengguna diminta memasukkan jumlah bunga yang akan diinput, yang disimpan dalam variabel n. Kemudian, program meminta input nama bunga sebanyak n kali atau hingga pengguna mengetik "SELESAI", di mana input dihentikan. Nama-nama bunga yang diinput akan digabungkan ke dalam variabel pita menggunakan operator "+" dengan tanda pemisah " - ". Setiap input yang valid akan meningkatkan hitungan bunga. Setelah proses input selesai, program menampilkan isi pita yang berisi nama-nama bunga dan jumlah bunga yang berhasil dimasukkan.
 
@@ -269,7 +304,7 @@ Buatlah program Pak Andi yang menerima input dua buah bilangan real positif yang
 
 Pada modifikasi program tersebut, program akan menampilkan true Jika selisih kedua isi kantong lebih dari atau sama dengan 9 kg. Program berhenti memproses apabila total berat isi kedua kantong melebihi 150 kg atau salah satu kantong beratnya negatif.
 
-```C++
+```go
 // Agnes Refilina Fiska
 // S1 IF11-05 / 2311102126
 
@@ -316,7 +351,7 @@ func main() {
 }
 ```
 #### Output:
-![240302_00h00m06s_screenshot]()
+![unguided2_Agnes.png]()
 
 Kode di atas bertujuan untuk membantu Pak Andi menjaga keseimbangan beban sepeda motornya dengan memeriksa selisih berat antara dua kantong terpal yang diisi barang belanjaan. Program menerima input dari pengguna berupa dua nilai yang mewakili berat barang di kantong kiri dan kanan. Program ini akan terus meminta input dari pengguna hingga salah satu dari dua kondisi terpenuhi: salah satu kantong memiliki berat lebih dari atau sama dengan 9 kg, atau selisih berat antara kedua kantong melebihi batas aman, yaitu 9 kg. Jika salah satu kantong mencapai berat 9 kg atau lebih, program akan menampilkan pesan "Proses selesai." dan menghentikan eksekusi. Di setiap iterasi, setelah pengguna memasukkan berat kedua kantong, program akan menghitung selisih berat antara kantong kiri dan kanan. Jika hasil perhitungan menunjukkan bahwa selisih tersebut lebih dari 9 kg, program akan menampilkan pesan: "Selisih berat antara kantong kiri dan kanan melebihi 9 kg." Jika tidak, program akan melanjutkan meminta input baru dari pengguna.
 Proses ini akan terus berulang selama kedua kondisi penghentian belum terpenuhi. Sebagai contoh, jika pengguna memasukkan berat kantong kiri sebesar 5.5 kg dan berat kantong kanan sebesar 3.2 kg, program akan menghitung selisihnya, yaitu 5.5 - 3.2 = 2.3 kg, yang masih kurang dari 9 kg. Karena itu, program tidak akan menampilkan pesan dan akan melanjutkan meminta input. Selanjutnya, jika pengguna memasukkan berat kantong kiri sebesar 10 kg dan kantong kanan sebesar 0 kg, selisihnya adalah 10 kg, yang melebihi batas aman. Maka, program akan menampilkan pesan: "Selisih berat antara kantong kiri dan kanan melebihi 9 kg." Jika kemudian pengguna memasukkan berat kantong kiri sebesar 9 kg dan kantong kanan sebesar 2 kg, program akan menghentikan eksekusi dengan menampilkan pesan "Proses selesai." karena berat kantong kiri telah mencapai 9 kg.
@@ -325,7 +360,7 @@ Proses ini akan terus berulang selama kedua kondisi penghentian belum terpenuhi.
 ### 3. [Soal]
 3. Diberikan sebuah persamaan sebagai berikut ini. Buatlah sebuah program yang menerima input sebuah bilangan sebagai K, kemudian menghitung dan menampilkan nilai f(K) sesuai persamaan di atas. 
 
-```C++
+```go
 // Agnes Refilina Fiska
 // S1 IF11-05 / 2311102126
 
@@ -354,7 +389,7 @@ func main() {
 
 ```
 #### Output:
-![240302_00h00m06s_screenshot]()
+![unguided3_Agnes.png]()
 
 Program ini berfungsi untuk menghitung dan menampilkan nilai fungsi matematis 
 𝑓(𝐾) berdasarkan nilai 𝐾 yang dimasukkan oleh pengguna. Dengan menggunakan rumus yang telah ditentukan, program menghitung pembilang dan penyebut, lalu menghitung hasilnya dan menampilkan hasil tersebut dengan format yang tepat.
@@ -366,7 +401,7 @@ Program ini berfungsi untuk menghitung dan menampilkan nilai fungsi matematis
 
 Dari berat parsel (dalam gram), harus dihitung total berat dalam kg dan sisanya (dalam gram). Biaya jasa pengiriman adalah Rp. 10.000,- per kg. Jika sisa berat tidak kurang dari 500 gram, maka tambahan biaya kirim hanya Rp. 5,- per gram saja. Tetapi jika kurang dari 500 gram, maka tambahan biaya akan dibebankan sebesar Rp. 15,- per gram. Sisa berat (yang kurang dari 1kg) digratiskan biayanya apabila total berat ternyata lebih dari 10kg. 
 
-```C++
+```go
 // Agnes Refilina Fiska
 // S1 IF11-05 / 2311102126
 
@@ -414,7 +449,7 @@ func main() {
 }
 ```
 #### Output:
-![240302_00h00m06s_screenshot]()
+![unguided4_Agnes.png]()
 
 Program ini dirancang untuk menghitung biaya pengiriman parsel berdasarkan beratnya dalam gram. Pertama, pengguna diminta untuk memasukkan berat parsel, dan program akan memeriksa apakah input yang diberikan valid (harus angka positif). Setelah itu, program menghitung berat parsel dalam kilogram dan sisa berat dalam gram. Biaya dasar pengiriman dihitung dengan mengalikan berat dalam kilogram dengan tarif Rp 10.000 per kilogram. Jika berat parsel lebih dari 10 kg, biaya tambahan untuk sisa berat dalam gram tidak dikenakan. Namun, jika berat parsel 10 kg atau kurang, program akan menghitung biaya tambahan berdasarkan sisa berat: Rp 5 per gram jika sisa berat lebih dari atau sama dengan 500 gram, dan Rp 15 per gram jika kurang dari 500 gram. Akhirnya, program menjumlahkan biaya dasar dan biaya tambahan, lalu menampilkan rincian berat dan biaya total pengiriman kepada pengguna.
 
@@ -425,7 +460,7 @@ Program ini dirancang untuk menghitung biaya pengiriman parsel berdasarkan berat
 
 Program berikut menerima input sebuah bilangan rill yang menyatakan NAM. Program menghitung NMK dan menampilkannya.
 
-```C++
+```go
 package main
 
 import "fmt"
@@ -488,7 +523,7 @@ Menentukan nilai huruf:
 
 ## Perbaiki program tersebut! Ujilah dengan masukan: 93.5; 70.6; 49.5. Seharusnya keluaran yang diperoleh adalah 'A', 'B', dan 'D'.
 
-```C++
+```go
 package main
 
 import "fmt"
@@ -536,7 +571,7 @@ Bilangan bulat b > 0 merupakan bilangan prima p jika dan hanya jika memiliki per
 
 Lanjutkan program sebelumnya. Setelah menerima masukan sebuah bilangan bulat b > 0. Program tersebut mencari dan menampilkan semua faktor bilangan tersebut. Kemudian, program menentukan apakah b merupakan bilangan prima. 
 
-```C++
+```go
 // Agnes Refilina Fiska
 // S1 IF11-05 / 2311102126
 
@@ -590,8 +625,11 @@ func main() {
 }
 ```
 #### Output:
-![240302_00h00m06s_screenshot]()
+![unguided5_Agnes.png]()
 
 Program ini ditulis dalam bahasa Go untuk mencari faktor dari sebuah bilangan bulat yang dimasukkan oleh pengguna dan menentukan apakah bilangan tersebut adalah bilangan prima. Pengguna diminta untuk memasukkan bilangan bulat lebih besar dari 1. Program memeriksa validitas input dan, jika valid, melakukan iterasi dari 1 hingga bilangan yang dimasukkan untuk mencari semua faktor. Faktor yang ditemukan ditambahkan ke dalam slice factors, dan variabel isPrime akan diubah menjadi false jika terdapat faktor lain selain 1 dan bilangan itu sendiri.
 
 Setelah proses pencarian selesai, program menampilkan bilangan yang dimasukkan, semua faktor yang ditemukan, dan status prima dari bilangan tersebut. Jika tidak ada faktor lain selain 1 dan bilangan itu sendiri, program mengonfirmasi bahwa bilangan tersebut adalah bilangan prima. Dengan cara ini, program memberikan solusi sederhana untuk mengevaluasi faktor dan status prima dari bilangan bulat.
+
+### KESIMPULAN
+Bahasa Go memiliki struktur yang sederhana dengan tipe data yang kaya dan mendukung berbagai operasi pada data. Tipe data yang disediakan oleh Go mencakup bilangan bulat, bilangan desimal, string, boolean, serta tipe data kompleks seperti array, slice, struct, dan map. Instruksi data dalam Go mencakup deklarasi variabel, operasi aritmatika, operasi logika dan perbandingan, serta instruksi kontrol untuk mengendalikan alur program.
