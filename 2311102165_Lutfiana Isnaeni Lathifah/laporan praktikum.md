@@ -60,7 +60,7 @@ Struktur kontrol pemilihan digunakan untuk mengeksekusi blok kode tertentu berda
 If Statement:
 Digunakan untuk mengeksekusi blok kode jika kondisi tertentu terpenuhi.
 
-```go++
+```go
 if kondisi {
     // blok kode yang dijalankan jika kondisi benar
 }
@@ -68,7 +68,7 @@ if kondisi {
 Else Statement:
 Menyediakan alternatif ketika kondisi if tidak terpenuhi.
 
-```go++
+```go
 if kondisi {
     // blok kode jika benar
 } else {
@@ -79,7 +79,7 @@ Else If Statement:
 
 Menangani beberapa kondisi secara berurutan.
 
-```go++
+```go
 if kondisi1 {
     // blok kode jika kondisi1 benar
 } else if kondisi2 {
@@ -91,7 +91,7 @@ if kondisi1 {
 Switch Statement:
 Menyediakan cara yang lebih mudah untuk menangani banyak kondisi.
 
-```go++
+```go
 switch variabel {
 case nilai1:
     // blok kode jika variabel sama dengan nilai1
@@ -107,7 +107,7 @@ Struktur kontrol perulangan digunakan untuk mengeksekusi blok kode secara berula
 For Loop:
 Merupakan struktur perulangan yang paling umum di Golang. Dapat digunakan dalam berbagai bentuk: perulangan dengan batas, perulangan tak terbatas, dan perulangan dengan iterator.
 
-```go++
+```go
 for i := 0; i < 10; i++ {
     // blok kode yang akan diulang
 }
@@ -116,7 +116,7 @@ While Loop:
 
 Golang tidak memiliki struktur while secara eksplisit, tetapi dapat diimplementasikan dengan menggunakan for.
 
-``` go++
+``` go
 for kondisi {
 
     // blok kode yang diulang selama kondisi benar
@@ -125,7 +125,7 @@ for kondisi {
 Range Loop:
 Digunakan untuk iterasi melalui array, slice, map, string, atau channel.
 
-```go++
+```go
 for index, value := range slice {
     // blok kode dengan index dan value dari slice
 }
@@ -145,7 +145,7 @@ Efisiensi: Mengoptimalkan alur eksekusi program, membuatnya lebih efisien dan le
 
 ### 1. [Input dan Output dalam Golang]
 
-```go++
+```go
 package main
 
 import (
@@ -192,7 +192,7 @@ Setelah menerima input, program mengeksekusi fmt.Println(nama) untuk menampilkan
 
 ### 2. [Operasi Aritmatika dan Input dalam Golang]
 
-```go++
+```go
 package main
 
 import "fmt"
@@ -248,7 +248,7 @@ Terakhir, program mencetak hasil total penjualan ke konsol dengan format yang te
 
 ### 3. [Siswa kelas IPA di salah satu sekolah menengah atas di Indonesia sedang mengadakan praktikum kimia. Di setiap percobaan akan menggunakan 4 tabung reaksi, yang mana. susunan warna cairan di setiap tabung akan menentukan hasil percobaan. Siswa diminta untuk mencatat hasil percobaan tersebut. Percobaan dikatakan berhasil apabila susunan warna zat cair pada gelas 1 hingga gelas 4 secara berturutan adalah 'merah', "kuning', "hijau', dan "ungu' selama 5 kali percobaan berulang. Buatlah sebuah program yang menerima Input berupa warna dari ke 4 gelas reaksi sebanyak 5 kali percobaan. Kemudian program akan menampilkan true apabila urutan warna sesuai dengan informasi yang diberikan pada paragraf sebelumnya, Telkom University urutan warna lainnya. dan false untuk informatics lab Perhatikan contoh sesi interaksi program seperti di bawah ini (teks bergaris bawah adalah input/read): dst]
 
-```go++
+```go
 package main
 
 import (
@@ -357,7 +357,7 @@ Program mencetak hasil akhir berdasarkan kesuksesan semua percobaan.
 
 ### 4. [Diberikan sebuah nilai akhir mata kuliah (NAM) (0..100] dan standar penilaian nilai mata kuliah (NMK) sebagai berikut: dst]
 
-```go++
+```go
 package main
 
 import "fmt"
@@ -449,7 +449,8 @@ Hasil akhir ditampilkan kepada pengguna dalam format yang mudah dibaca.
 ### 2b no 2. [Suatu pita (string) berisi kumpulan nama-nama bunga yang dipisahkan oleh spasi dan '-', contoh pita diilustrasikan seperti berikut ini.Pita: mawar - melati - tulip - teratai - kamboja - anggrek Buatlah sebuah program yang menerima input sebuah bilangan bulat positif (dan tidak nol) N, kemudian program akan meminta input berupa nama bunga secara berulang sebanyak N kali dan nama tersebut disimpan ke dalam pita. (Petunjuk: gunakan operasi penggabungan string dengan operator "+"). Tampilkan isi pita setelah proses input selesai. Perhatikan contoh sesi interaksi program seperti di bawah ini (teks bergarls bawah adalah input/read): dst]
 
 ### Program pertama: Meminta input N nama bunga dan menampilkan pita.
-```go++
+
+```go
 //Lutfiana Isnaeni Lathifah
 //2311102165
 
@@ -536,7 +537,7 @@ Setelah semua nama bunga dimasukkan, program akan menampilkan hasilnya dalam for
 
 ### Program kedua: Program berhenti jika input adalah "SELESAI".
 
-```go++
+```go
 // lutfiana Isnaeni Lathifah
 // 2311102165
 
@@ -632,8 +633,10 @@ Setelah pengguna selesai memasukkan nama bunga (dengan mengetik "SELESAI"), prog
 
 ### 2b no 3. [Setiap hari Pak Andi membawa banyak barang belanjaan dari pasar dengan mengendarai sepeda motor. Barang belanjaan tersebut dibawa dalam kantong terpal di kiri-kanan motor. Sepeda motor tidak akan oleng jika selisih berat barang di kedua kantong sisi tidak lebih dari 9 kg.Buatlah program Pak Andi yang menerima input dua buah bilangan real positif yang menyatakan berat total masing-masing isi kantong terpal. Program akan terus meminta input bilangan tersebut hingga salah satu kantong terpal berisi 9 kg atau lebih. Perhatikan contoh sesi interaksi program seperti di bawah ini (teks bergarls bawah adalah input/read): dst]
 
+
 ### Program pertama: Menghitung berat total kantong dan menghentikan saat salah satu kantong mencapai 9 kg atau lebih.
-```go++
+
+```go
 // Lutfiana Isnaeni Lathifah
 // 2311102165
 
@@ -696,7 +699,8 @@ Jika kedua kantong tidak melebihi 9 kg, program akan meminta pengguna untuk mema
 ![ss output unguided 2b no 3 ke 1](https://github.com/user-attachments/assets/e84cdd05-349a-49b7-9247-5e0eac9e1189)
 
 ### Program ke dua Menampilkan status sepeda oleng jika selisih berat lebih dari 9 kg, dan berhenti saat berat total lebih dari 150 kg atau ada kantong negatif.
-```go++
+
+```go
 // Lutfiana Isnaeni Lathifah
 // 2311102165
 
@@ -788,7 +792,8 @@ Proses ini akan berulang hingga salah satu dari kondisi berhenti terpenuhi.
 ### 2b no 4. [Diberikan sebuah persamaan sebagai berikut ini. Informatics lab f(k) = ((4k + 2) ^ 2)/((4k + 1)(4k + 3)) Buatlah sebuah program yang menerima input sebuah bilangan sebagai K, kemudian menghitung dan menampilkan nilai f(k) sesuai persamaan di atas. Perhatikan contoh sesi interaksi program seperti di bawah ini (teks bergaris bawah adalah input/read): dst ]
 
 ### Program pertama: Menghitung nilai f(k)
-```go++
+
+```go
 // Lutfiana Isnaeni Lathifah
 // 2311102165
 
@@ -891,7 +896,8 @@ Tampilkan hasil perhitungan dengan format dua belas desimal menggunakan fmt.Prin
 ![ss unguided 2b no 4 ke 1](https://github.com/user-attachments/assets/11ff7a75-3204-467f-8ee9-acc1bc8ff641)
 
 ### Program ke dua menghitung hampiran nilai akar 2 dengan menggunakan fungsi f(k)
-```go++
+
+```go
 // Lutfiana Isnaeni Lathifah
 // 2311102165
 
@@ -976,7 +982,7 @@ Terakhir, hasil hampiran akar 2. Ditampilkan di layar dengan format dua belas de
 
 ### 2c no 1. [PT POS membutuhkan aplikasi perhitungan biaya kirim berdasarkan berat parsel. Maka, buatlah program BlayaPos untuk menghitung blaya pengiriman tersebut dengan ketentuan sebagai berikut! Dari berat parsel (dalam gram), harus dihitung total berat dalam kg dan sisanya (dalam gram). Biaya jasa pengiriman adalah Rp. 10.000,- per kg. Jika sisa berat tidak kurang dari 500 gram, maka tambahan biaya kirim hanya Rp. 5,- per gram saja. Tetapi jika kurang dari 500 gram, maka tambahan biaya akan dibebankan sebesar Rp. 15,- per gram. Sisa berat (yang kurang dari 1kg) digratiskan biayanya apabila total berat ternyata lebih dari 10kg. Perhatikan contoh sesi interaksi program seperti di bawah ini (teks bergaris bawah adalah input/read): dst]
 
-```go++
+```go
 // Lutfiana Isnaeni Lathifah
 // 2311102165
 
@@ -1077,7 +1083,8 @@ Di dalam fungsi main, fungsi hitungBiayaPengiriman dipanggil dengan beberapa con
 ### 2c no 3. [Sebuah bilangan bulat b memiliki faktor bilangan f > O jika f habis membagi b. Contoh: 2 merupakan faktor dari bilangan 6 karena 6 habis dibagi 2. Buatlah program yang menerima input sebuah bilangan bulat b dan b> 1. Program harus dapat mencari dan menampilkan semua faktor dari bilangan tersebut! Perhatikan contoh sesi interaksi program seperti di bawah ini (teks bergaris bawah adalah input/read): dst]
 
 ### Program pertama:
-```go++
+
+```go
 // Lutfiana Isnaeni Lathifah
 // 2311102165
 
